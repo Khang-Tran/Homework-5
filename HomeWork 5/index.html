@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <!-- for azure:  all these links must use https, not http -->
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <title>Course Project</title>
+  <link rel="stylesheet" type="text/css" href="https://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css"/>
+  <script src="https://code.jquery.com/jquery-1.8.2.min.js"> </script>
+  <script src="https://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+  <script src="/main.js"></script>
+ </head>
+
+ <body>
+      //*********************************************************
+      //*********************************************************
+<div data-role="page" id="Home">
+
+   <div data-role="header" data-theme='b'> 
+      <h1>Khang's Car App</h1>
+      <div data-role="navbar">
+         <ul>
+               <li><a href="#Show" data-icon="star">Show Car Garage</a> </li>
+               <li><a href="#AddDelete" data-icon="plus">Edit Cars/Cars List</a> </li>
+               <li><a href="#Schedule" data-icon="plus">Schedule a Service Appointment</a></li>
+         </ul>
+      </div><!-- /navbar -->
+   </div>
+
+   <div data-role="content" data-theme='c'>
+      <h2>Cars App</h2>
+      <img src="./images/NotePic.jpeg" alt="Smiley face" >.
+      
+   </div>
+
+   <div data-role="footer" data-theme='b'>
+      <h1>Copywrite Kurt 2020</h1>
+   </div>
+
+</div>
+//*********************************************************
+//*********************************************************
+<div data-role="page" id="Show">
+
+   <div data-role="header" data-theme='b'> 
+      <h1>Khang's Car App</h1>
+      <div data-role="navbar">
+            <ul>
+                  <li><a href="#Home" data-icon="home">Home Page</a></li>
+                  <li><a href="#AddDelete" data-icon="plus">Edit Cars/Cars List</a> </li>
+                  <li><a href="#Schedule" data-icon="plus">Schedule a Service Appointment</a></li>
+            </ul>
+         </div><!-- /navbar -->
+   </div>
+
+   <div data-role="content" data-theme='c'>
+     <h2>Cars List</h2>
+     <div>
+         1. Honda Accord  (click here to get details on 4th page)</br>
+         2. Toyota Sienna   (click here to get details  on 4th page)</br>
+         3. FOrd F150  (click here to get details on 4th page)</br>
+     </div>
+   </div>
+
+   <div data-role="footer" data-theme='b'>
+      <h1>Copywrite Kurt 2020</h1>
+   </div>
+
+</div>
+
+<div data-role="page" id="AddDelete">
+
+            <div data-role="header" data-theme='b'> 
+            <h1>Khang's Cars App</h1>
+               <div data-role="navbar">
+                     <ul>
+                        <li><a href="#Home" data-icon="home">Home Page</a></li>
+                        <li><a href="#Show" data-icon="star">Show Car Garage</a> </li>
+                        <li><a href="#Schedule" data-icon="plus">Schedule a Service Appointment</a></li>
+                     </ul>
+                  </div><!-- /navbar -->
+            </div>
+    
+            <div data-role="content" data-theme='d'>
+               <h2>Delete a Car by Model Name</h2>
+               Enter a Model Name ________ </br>
+               Click this delete button
+            </div>
+            <div data-theme='d'>
+               <h3>Add a new Car here</h3>
+               Make: __________________</br>
+               Model:  __________________</br>
+               Miles Done:  __________________</br>
+               Average Miles Per Gallon (MPG):  __________________</br>
+               Additional Comments:  __________________</br>
+               Click this add button
+            </div>
+    
+            <div data-role="footer"  data-theme='b'>
+                <h1>Copywrite Kurt 2020</h1>
+            </div>
+    
+</div>
+
+
+//*********************************************************
+//*********************************************************
+
+<!-- // there are no user links to this page as it should only be displayed by a li event which  -->
+<!-- // has set the hidden field -->
+
+<div data-role="page" id="Details">
+
+            <div data-role="header" data-theme='b'> 
+            <h1>Kurt's Note App</h1>
+               <div data-role="navbar">
+                     <ul>
+                        <li><a href="#Home" data-icon="home">Home Page</a></li>
+                        <li><a href="#Show" data-icon="star">Show Car Garage</a> </li>
+                        <li><a href="#AddDelete" data-icon="plus">Edit Cars/Cars List</a> </li>
+                     </ul>
+                  </div><!-- /navbar -->
+            </div>
+    
+            <div data-role="content" data-theme='d'>
+               <h2>Here are the details for that Car</h2>
+               <div>
+                  <p id="IDparmHere" hidden>change1</p>  <!-- not visable,     a place to stash the note title -->
+                      <!-- our li events write the value, and our Details pagebeforeshow  reads it -->
+                  <p class="bold" > Here are the details</p>
+                  <p> <span class="bold"> Total Miles Done: </span> <span id="oneMiles" </span>  </p>
+                  <p><span class="bold"> Average MPG: </span> <span id="oneMPG" </span>  </p>
+                  <p><span class="bold"> Any Additional Comments: </span> <span id="oneComment" </span>  </p>
+               </div>
+               
+
+            </div>
+    
+            <div data-role="footer"  data-theme='b'>
+                <h1>Copywrite Kurt 2020</h1>
+            </div>
+    
+</div>
+//**********************************************************************
+<div data-role="page" id="Schedule">
+
+   <div data-role="header" data-theme='b'> 
+   <h1>Khang's Cars App</h1>
+      <div data-role="navbar">
+            <ul>
+               <li><a href="#Home" data-icon="home">Home Page</a></li>
+               <li><a href="#Show" data-icon="star">Show Car Garage</a> </li>
+               <li><a href="#Schedule" data-icon="plus">Schedule a Service Appointment</a></li>
+            </ul>
+         </div><!-- /navbar -->
+   </div>
+
+   <div data-role="content" data-theme='d'>
+      <h2>Schedule a Service Appointment for Your Car Here</h2>
+      Enter Your Car's Name ________ </br>
+      Click here
+   </div>
+   <!--Here I'll have the javascript go through a list of car manufacturers that I'll have made 
+      and what I want to happen is that the number of the service center for the person's cars to already appear based on what they had
+      in their car garage. I'll have a number already assigned to each manufacturer 
+      so as long as theres something in their garage, I'll have a phone number ready to go on this page -->
+</div>
+
+ </body>
+ </html> 
